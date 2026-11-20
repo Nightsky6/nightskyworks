@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보 처리방침 - Plain Zipper</title>
+    <link rel="icon" href="plainzipper.png" type="image/png">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+            color: #1e1e2e;
+            background: #fafafa;
+        }
+        header { margin-bottom: 40px; }
+        h1 { font-size: 2em; color: #2563eb; margin-bottom: 8px; }
+        .subtitle { color: #555; font-size: 1em; }
+        h2 {
+            color: #1e40af;
+            margin: 36px 0 12px;
+            font-size: 1.2em;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 6px;
+        }
+        p { margin: 10px 0; }
+        ul { padding-left: 22px; margin: 10px 0; }
+        li { margin: 7px 0; }
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+        .highlight {
+            background: #f0f4ff;
+            border-left: 4px solid #2563eb;
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .updated {
+            display: inline-block;
+            background: #e5e7eb;
+            color: #374151;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-bottom: 20px;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 24px;
+        }
+        .lang-switch button {
+            border: 1px solid #cbd5e1;
+            background: white;
+            color: #334155;
+            padding: 6px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            margin-left: 6px;
+            font-size: 0.9em;
+        }
+        .lang-switch button.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+        footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+        footer a { color: #2563eb; text-decoration: none; margin: 0 8px; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <button id="koBtn" class="active" onclick="setLanguage('ko')">한국어</button>
+        <button id="enBtn" onclick="setLanguage('en')">English</button>
+    </div>
+
+    <!-- Korean -->
+    <div id="ko" class="lang-section active">
+        <header>
+            <h1>개인정보 처리방침</h1>
+            <p class="subtitle">Plain Zipper</p>
+            <span class="updated">최종 업데이트: 2026년 11월</span>
+        </header>
+
+        <div class="highlight">
+            <strong>요약:</strong> Plain Zipper는 인터넷에 연결하지 않으며, 개인정보를 수집하거나 외부로 전송하지 않습니다.
+            압축 파일과 그 안의 내용은 모두 사용자의 기기 안에서만 처리됩니다.
+            앱은 동작에 필요한 설정과 최근 연 파일 목록만 사용자의 기기에 저장하며, 압축 파일 암호는 저장하지 않습니다.
+        </div>
+
+        <section>
+            <h2>1. 기기에 저장하는 정보</h2>
+            <p>Plain Zipper는 앱 기능 제공을 위해 다음 정보를 사용자의 기기에만 저장합니다:</p>
+            <ul>
+                <li><strong>앱 설정:</strong> 새로 압축할 때의 형식·압축 수준·분할 크기, 풀고 나서 할 일, 폴더 창 표시 여부 등 사용자 환경설정</li>
+                <li><strong>최근 파일 목록:</strong> 사용자가 최근에 연 압축 파일의 경로 (파일 메뉴의 최근 파일 목록 표시용)</li>
+                <li><strong>임시 파일:</strong> 압축 파일 안의 파일을 열거나 미리 보거나 바깥으로 끌어 꺼낼 때, 그 파일을 Windows 임시 폴더 안의 앱 전용 폴더에 잠시 풀어 둡니다. 이 파일은 앱을 종료할 때 지워집니다</li>
+            </ul>
+            <p>위 정보는 개발자에게 전송되지 않으며, 사용자의 기기 밖으로 나가지 않습니다.</p>
+        </section>
+
+        <section>
+            <h2>2. 압축 파일과 암호</h2>
+            <ul>
+                <li>사용자가 열거나 만드는 압축 파일과 그 안의 내용은 사용자의 기기 안에서만 읽고 씁니다</li>
+                <li>압축 파일의 암호는 저장하지 않습니다. 입력한 암호는 해당 작업을 하는 동안에만 메모리에서 사용됩니다</li>
+                <li>여러 압축 파일을 한꺼번에 풀거나 검사할 때, 같은 암호를 다시 묻지 않도록 그 작업이 끝날 때까지만 암호를 기억합니다</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. 인터넷 연결</h2>
+            <p>
+                Plain Zipper는 인터넷에 연결하지 않습니다.
+                사용 통계, 오류 보고, 광고, 업데이트 확인 등을 위해 개발자의 서버나 제3자 서버와 통신하지 않습니다.
+                앱 업데이트는 Microsoft Store를 통해 제공됩니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. 수집하지 않는 정보</h2>
+            <p>Plain Zipper는 다음 정보를 수집하지 않습니다:</p>
+            <ul>
+                <li>압축 파일 및 그 안의 파일 내용</li>
+                <li>압축 파일 암호</li>
+                <li>사용 통계 또는 행동 분석 데이터</li>
+                <li>광고 식별자 또는 추적 데이터</li>
+                <li>이름, 이메일, 위치, 연락처 등 개인 식별 정보</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. 제3자 공유</h2>
+            <p>
+                Plain Zipper는 어떠한 정보도 수집하지 않으므로, 제3자에게 판매하거나 공유하는 정보가 없습니다.
+                다만 앱의 설치, 업데이트, 결제 등 Microsoft Store를 통해 이루어지는 과정에는
+                Microsoft의 개인정보 처리방침이 적용될 수 있습니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. 파일 삭제 관련 기능</h2>
+            <p>
+                사용자가 직접 켠 경우에만, 앱은 압축한 뒤 원본 파일을 휴지통으로 보내거나
+                압축을 다 푼 뒤 압축 파일을 휴지통으로 보낼 수 있습니다.
+                이 기능은 기본적으로 꺼져 있으며, 휴지통으로 보낸 파일은 Windows 휴지통에서 되살릴 수 있습니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. 사용자의 선택과 제어</h2>
+            <p>사용자는 다음과 같은 방법으로 자신의 데이터를 관리할 수 있습니다:</p>
+            <ul>
+                <li>파일 메뉴의 최근 파일 목록에서 목록 지우기</li>
+                <li>앱 안의 설정 메뉴에서 환경설정 변경</li>
+                <li>앱 제거를 통해 앱 설정과 최근 파일 목록 삭제</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>8. 아동 개인정보 보호</h2>
+            <p>
+                Plain Zipper는 개인정보를 수집하지 않으며, 13세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>9. 방침 변경</h2>
+            <p>
+                본 개인정보 처리방침은 필요 시 업데이트될 수 있습니다.
+                중요한 변경 사항이 있을 경우 앱 스토어 업데이트 노트 또는 이 페이지를 통해 안내합니다.
+                최신 방침은 항상 이 페이지에서 확인하실 수 있습니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>10. 문의</h2>
+            <p>개인정보 처리방침에 관한 문의사항은 아래 이메일로 연락해 주세요:</p>
+            <p><strong>nightskyworks@gmail.com</strong></p>
+        </section>
+    </div>
+
+    <!-- English -->
+    <div id="en" class="lang-section">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Plain Zipper</p>
+            <span class="updated">Last updated: November 2026</span>
+        </header>
+
+        <div class="highlight">
+            <strong>Summary:</strong> Plain Zipper does not connect to the internet and does not collect or transmit any personal information.
+            Archives and their contents are processed only on your device.
+            The app stores only the settings and recent file list it needs on your device, and it does not save archive passwords.
+        </div>
+
+        <section>
+            <h2>1. Information Stored on Your Device</h2>
+            <p>Plain Zipper stores the following information only on your device to provide its features:</p>
+            <ul>
+                <li><strong>App settings:</strong> Preferences such as the format, compression level, and split size for new archives, what to do after extraction, and whether the folder pane is shown</li>
+                <li><strong>Recent file list:</strong> Paths of archives you recently opened (used to show the recent files list in the File menu)</li>
+                <li><strong>Temporary files:</strong> When you open, preview, or drag out a file from inside an archive, the app briefly extracts it to an app-specific folder inside the Windows temporary folder. These files are deleted when the app closes</li>
+            </ul>
+            <p>This information is never sent to the developer and never leaves your device.</p>
+        </section>
+
+        <section>
+            <h2>2. Archives and Passwords</h2>
+            <ul>
+                <li>Archives you open or create, and their contents, are read and written only on your device</li>
+                <li>Archive passwords are not saved. A password you enter is kept in memory only while that task is running</li>
+                <li>When extracting or testing several archives at once, the password is remembered only until that task finishes, so you are not asked for the same password again</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Internet Connection</h2>
+            <p>
+                Plain Zipper does not connect to the internet.
+                It does not communicate with the developer's servers or any third-party servers for usage statistics,
+                error reports, advertising, or update checks.
+                App updates are delivered through the Microsoft Store.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Information We Do Not Collect</h2>
+            <p>Plain Zipper does not collect the following information:</p>
+            <ul>
+                <li>The contents of archives or the files inside them</li>
+                <li>Archive passwords</li>
+                <li>Usage statistics or behavioral analytics data</li>
+                <li>Advertising identifiers or tracking data</li>
+                <li>Personally identifiable information such as name, email, location, or contacts</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Third-Party Sharing</h2>
+            <p>
+                Because Plain Zipper does not collect any information, there is no information to sell or share with third parties.
+                However, Microsoft's privacy policy may apply to processes handled through the Microsoft Store,
+                such as installing, updating, or purchasing the app.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. File Deletion Features</h2>
+            <p>
+                Only if you turn these options on, the app can move the original files to the Recycle Bin after compressing,
+                or move an archive to the Recycle Bin after fully extracting it.
+                These options are off by default, and files moved to the Recycle Bin can be restored from the Windows Recycle Bin.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. Your Choices and Controls</h2>
+            <p>You can manage your data in the following ways:</p>
+            <ul>
+                <li>Clear the recent files list from the File menu</li>
+                <li>Change your preferences from the menus inside the app</li>
+                <li>Uninstall the app to remove its settings and recent file list</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>8. Children's Privacy</h2>
+            <p>
+                Plain Zipper does not collect personal information and does not knowingly collect personal information from children under the age of 13.
+            </p>
+        </section>
+
+        <section>
+            <h2>9. Changes to This Policy</h2>
+            <p>
+                This Privacy Policy may be updated when necessary.
+                Important changes may be announced through app store update notes or on this page.
+                The latest version of the policy will always be available on this page.
+            </p>
+        </section>
+
+        <section>
+            <h2>10. Contact</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+            <p><strong>nightskyworks@gmail.com</strong></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>
+            <a href="index.html">홈 / Home</a>
+            <a href="terms-of-service.html">사용약관 / Terms of Service</a>
+        </p>
+        <p style="margin-top:10px;">&copy; 2026 Plain Zipper. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const ko = document.getElementById('ko');
+            const en = document.getElementById('en');
+            const koBtn = document.getElementById('koBtn');
+            const enBtn = document.getElementById('enBtn');
+
+            if (lang === 'ko') {
+                ko.classList.add('active');
+                en.classList.remove('active');
+                koBtn.classList.add('active');
+                enBtn.classList.remove('active');
+                document.documentElement.lang = 'ko';
+                document.title = '개인정보 처리방침 - Plain Zipper';
+            } else {
+                en.classList.add('active');
+                ko.classList.remove('active');
+                enBtn.classList.add('active');
+                koBtn.classList.remove('active');
+                document.documentElement.lang = 'en';
+                document.title = 'Privacy Policy - Plain Zipper';
+            }
+        }
+    </script>
+</body>
+</html>

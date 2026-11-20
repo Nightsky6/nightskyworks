@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용약관 - Plain Zipper</title>
+    <link rel="icon" href="plainzipper.png" type="image/png">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+            color: #1e1e2e;
+            background: #fafafa;
+        }
+        header { margin-bottom: 40px; }
+        h1 { font-size: 2em; color: #2563eb; margin-bottom: 8px; }
+        .subtitle { color: #555; font-size: 1em; }
+        h2 {
+            color: #1e40af;
+            margin: 36px 0 12px;
+            font-size: 1.2em;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 6px;
+        }
+        p { margin: 10px 0; }
+        ul { padding-left: 22px; margin: 10px 0; }
+        li { margin: 7px 0; }
+        .highlight {
+            background: #fff7ed;
+            border-left: 4px solid #f59e0b;
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .updated {
+            display: inline-block;
+            background: #e5e7eb;
+            color: #374151;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-bottom: 20px;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 24px;
+        }
+        .lang-switch button {
+            border: 1px solid #cbd5e1;
+            background: white;
+            color: #334155;
+            padding: 6px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            margin-left: 6px;
+            font-size: 0.9em;
+        }
+        .lang-switch button.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+        footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+        footer a { color: #2563eb; text-decoration: none; margin: 0 8px; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <button id="koBtn" class="active" onclick="setLanguage('ko')">한국어</button>
+        <button id="enBtn" onclick="setLanguage('en')">English</button>
+    </div>
+
+    <!-- Korean -->
+    <div id="ko" class="lang-section active">
+        <header>
+            <h1>사용약관</h1>
+            <p class="subtitle">Plain Zipper</p>
+            <span class="updated">최종 업데이트: 2026년 11월</span>
+        </header>
+
+        <div class="highlight">
+            앱을 설치하거나 사용함으로써 아래 사용약관에 동의하는 것으로 간주됩니다.
+            약관에 동의하지 않으시면 앱 사용을 중단해 주세요.
+        </div>
+
+        <section>
+            <h2>1. 서비스 개요</h2>
+            <p>
+                Plain Zipper(이하 "앱")는 Windows 운영체제에서 압축 파일을 열고, 풀고, 만들고,
+                압축 파일 안의 파일을 추가·삭제·이름 변경하는 기능을 제공하는 무료 소프트웨어입니다.
+                앱은 nightskyworks(이하 "개발자")가 개발 및 배포합니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. 사용 권한</h2>
+            <p>개발자는 본 약관에 따라 사용자에게 다음 권한을 부여합니다:</p>
+            <ul>
+                <li>개인 및 업무 목적으로 앱을 설치하고 사용할 권리</li>
+                <li>앱에서 제공하는 압축, 압축 풀기, 검사, 편집 기능을 약관 범위 내에서 이용할 권리</li>
+                <li>앱으로 만든 압축 파일을 자유롭게 저장, 복사, 이동, 배포할 권리</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. 제한 사항</h2>
+            <p>사용자는 다음 행위를 해서는 안 됩니다:</p>
+            <ul>
+                <li>앱을 상업적 목적으로 무단 재배포하거나 판매하는 행위</li>
+                <li>앱의 명칭, 아이콘, 디자인을 무단으로 복제하여 별도 제품으로 배포하는 행위</li>
+                <li>앱을 이용하여 타인의 저작물, 개인정보, 기밀 정보를 무단으로 수집·유통하는 행위</li>
+                <li>앱을 이용하여 악성 코드를 유포하거나 관련 법령을 위반하는 행위</li>
+            </ul>
+            <p>
+                단, 앱에 포함된 오픈소스 구성 요소는 각 구성 요소의 라이선스를 따르며,
+                본 약관은 해당 라이선스가 사용자에게 허용하는 권리를 제한하지 않습니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. 압축 파일과 사용자 콘텐츠</h2>
+            <p>
+                사용자가 앱으로 열거나 만드는 압축 파일과 그 안의 내용에 대한 권리와 책임은 사용자에게 있습니다.
+                개발자는 사용자의 파일 내용에 대한 소유권을 주장하지 않으며, 그 내용을 열람하거나 수집하지 않습니다.
+            </p>
+            <ul>
+                <li>사용자는 압축하거나 푸는 파일이 관련 법령이나 타인의 권리를 침해하지 않도록 책임을 집니다</li>
+                <li>출처를 알 수 없는 압축 파일 안의 실행 파일은 주의해서 다루시기 바랍니다</li>
+                <li>압축 파일에 건 암호를 잊으면 개발자도 내용을 되살릴 수 없습니다. 암호는 사용자가 직접 관리해야 합니다</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. 파일 덮어쓰기 및 삭제</h2>
+            <p>
+                압축을 풀 때 같은 이름의 파일이 있으면 앱은 덮어쓸지 먼저 묻습니다.
+                사용자가 직접 켠 경우에만 앱은 압축한 뒤 원본을 휴지통으로 보내거나,
+                다 푼 뒤 압축 파일을 휴지통으로 보낼 수 있습니다.
+            </p>
+            <p>
+                앱은 파일을 지우기 전에 확인 절차를 거치지만, 모든 상황에서 데이터 손실을 완전히 방지한다고 보장하지 않습니다.
+                사용자는 중요한 데이터를 별도로 백업할 책임이 있습니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. 오픈소스 구성 요소</h2>
+            <p>
+                앱은 7-Zip, libarchive, unRAR, zlib 등 여러 오픈소스 구성 요소를 사용합니다.
+                각 구성 요소의 저작권과 라이선스 고지는 앱의 도움말 메뉴에 있는 "오픈소스 라이선스"에서 확인할 수 있습니다.
+                앱은 RAR 파일을 풀기만 하며, RAR 파일을 만드는 기능은 제공하지 않습니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. 지식재산권</h2>
+            <p>
+                오픈소스 구성 요소를 제외한 앱의 소프트웨어, 디자인, 아이콘, 로고 등의 지식재산권은
+                개발자 또는 정당한 권리자에게 귀속됩니다.
+                본 약관은 앱에 대한 지식재산권을 사용자에게 양도하지 않습니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>8. 면책조항</h2>
+            <p>
+                앱은 "있는 그대로(AS-IS)" 제공됩니다. 개발자는 다음에 대해 책임을 지지 않습니다:
+            </p>
+            <ul>
+                <li>앱 사용 또는 사용 불능으로 인한 직·간접적 손해</li>
+                <li>압축 파일, 원본 파일, 풀린 파일의 손실 또는 손상</li>
+                <li>손상되었거나 지원하지 않는 형식의 압축 파일을 처리하지 못하는 문제</li>
+                <li>사용자 기기, 운영체제, 다른 소프트웨어와의 충돌로 인한 문제</li>
+                <li>앱의 오류, 버그, 기능 변경 또는 배포 중단</li>
+            </ul>
+            <p>중요한 데이터는 사용자가 직접 별도로 백업하시기를 권장합니다.</p>
+        </section>
+
+        <section>
+            <h2>9. 서비스 변경 및 중단</h2>
+            <p>
+                개발자는 앱의 기능, 디자인, 지원 형식 등을 변경할 수 있으며,
+                필요한 경우 앱의 배포 또는 일부 기능 제공을 중단할 수 있습니다.
+                앱 업데이트는 Microsoft Store를 통해 제공됩니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>10. 약관 변경</h2>
+            <p>
+                본 약관은 필요에 따라 변경될 수 있습니다.
+                변경된 약관은 이 페이지에 게시되며, 변경 후 앱을 계속 사용하면
+                변경된 약관에 동의한 것으로 간주됩니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>11. 준거법</h2>
+            <p>
+                본 약관은 대한민국 법률에 따라 해석되고 적용됩니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>12. 문의</h2>
+            <p>약관에 관한 문의사항은 아래 이메일로 연락해 주세요:</p>
+            <p><strong>nightskyworks@gmail.com</strong></p>
+        </section>
+    </div>
+
+    <!-- English -->
+    <div id="en" class="lang-section">
+        <header>
+            <h1>Terms of Service</h1>
+            <p class="subtitle">Plain Zipper</p>
+            <span class="updated">Last updated: November 2026</span>
+        </header>
+
+        <div class="highlight">
+            By installing or using this app, you are considered to have agreed to these Terms of Service.
+            If you do not agree to these terms, please stop using the app.
+        </div>
+
+        <section>
+            <h2>1. Service Overview</h2>
+            <p>
+                Plain Zipper ("the App") is free software for Windows that lets you open, extract, and create archives,
+                and add, delete, or rename files inside archives.
+                The App is developed and distributed by nightskyworks ("the Developer").
+            </p>
+        </section>
+
+        <section>
+            <h2>2. License to Use</h2>
+            <p>The Developer grants users the following rights under these terms:</p>
+            <ul>
+                <li>The right to install and use the App for personal and work purposes</li>
+                <li>The right to use the compression, extraction, testing, and editing features within the scope of these terms</li>
+                <li>The right to freely store, copy, move, and distribute archives created with the App</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Restrictions</h2>
+            <p>Users must not do the following:</p>
+            <ul>
+                <li>Redistribute or sell the App for commercial purposes without permission</li>
+                <li>Copy the App's name, icon, or design and distribute them as a separate product</li>
+                <li>Use the App to collect or distribute another person's copyrighted content, personal information, or confidential information without permission</li>
+                <li>Use the App to spread malicious code or for any purpose that violates applicable laws</li>
+            </ul>
+            <p>
+                However, the open-source components included in the App are governed by their own licenses,
+                and these terms do not limit any rights those licenses grant to users.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Archives and User Content</h2>
+            <p>
+                Users own and are responsible for the archives they open or create with the App and the contents of those archives.
+                The Developer does not claim ownership of user files and does not view or collect their contents.
+            </p>
+            <ul>
+                <li>Users are responsible for ensuring that the files they compress or extract do not violate laws or the rights of others</li>
+                <li>Please be careful with executable files inside archives from unknown sources</li>
+                <li>If you forget an archive password, the Developer cannot recover the contents. Users must manage their own passwords</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Overwriting and Deleting Files</h2>
+            <p>
+                When extracting, the App asks before overwriting files with the same name.
+                Only if the user turns these options on, the App can move the original files to the Recycle Bin after compressing,
+                or move an archive to the Recycle Bin after fully extracting it.
+            </p>
+            <p>
+                The App performs checks before deleting files, but it does not guarantee that data loss can be completely
+                prevented in all situations. Users are responsible for backing up important data separately.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Open-Source Components</h2>
+            <p>
+                The App uses several open-source components, including 7-Zip, libarchive, unRAR, and zlib.
+                Copyright and license notices for each component are available under "Open-Source Licenses" in the App's Help menu.
+                The App only extracts RAR files and does not provide any feature to create RAR files.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. Intellectual Property</h2>
+            <p>
+                Except for the open-source components, the software, design, icons, logo, and other components of the App
+                are owned by the Developer or their rightful owners.
+                These terms do not transfer any intellectual property rights in the App to the user.
+            </p>
+        </section>
+
+        <section>
+            <h2>8. Disclaimer</h2>
+            <p>
+                The App is provided "AS IS." The Developer is not responsible for:
+            </p>
+            <ul>
+                <li>Direct or indirect damages caused by use or inability to use the App</li>
+                <li>Loss or corruption of archives, original files, or extracted files</li>
+                <li>Failure to process damaged or unsupported archives</li>
+                <li>Problems caused by conflicts with the user's device, operating system, or other software</li>
+                <li>Errors, bugs, feature changes, or discontinuation of App distribution</li>
+            </ul>
+            <p>Users are encouraged to back up important data separately.</p>
+        </section>
+
+        <section>
+            <h2>9. Changes or Discontinuation of Service</h2>
+            <p>
+                The Developer may change the App's features, design, or supported formats,
+                and may discontinue distribution of the App or some of its features when necessary.
+                App updates are provided through the Microsoft Store.
+            </p>
+        </section>
+
+        <section>
+            <h2>10. Changes to These Terms</h2>
+            <p>
+                These terms may be updated when necessary.
+                Updated terms will be posted on this page.
+                Continued use of the App after changes are posted means that the user agrees to the updated terms.
+            </p>
+        </section>
+
+        <section>
+            <h2>11. Governing Law</h2>
+            <p>
+                These terms are governed by and interpreted according to the laws of the Republic of Korea.
+            </p>
+        </section>
+
+        <section>
+            <h2>12. Contact</h2>
+            <p>If you have any questions about these terms, please contact us at:</p>
+            <p><strong>nightskyworks@gmail.com</strong></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>
+            <a href="index.html">홈 / Home</a>
+            <a href="privacy-policy.html">개인정보 처리방침 / Privacy Policy</a>
+        </p>
+        <p style="margin-top:10px;">&copy; 2026 Plain Zipper. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const ko = document.getElementById('ko');
+            const en = document.getElementById('en');
+            const koBtn = document.getElementById('koBtn');
+            const enBtn = document.getElementById('enBtn');
+
+            if (lang === 'ko') {
+                ko.classList.add('active');
+                en.classList.remove('active');
+                koBtn.classList.add('active');
+                enBtn.classList.remove('active');
+                document.documentElement.lang = 'ko';
+                document.title = '사용약관 - Plain Zipper';
+            } else {
+                en.classList.add('active');
+                ko.classList.remove('active');
+                enBtn.classList.add('active');
+                koBtn.classList.remove('active');
+                document.documentElement.lang = 'en';
+                document.title = 'Terms of Service - Plain Zipper';
+            }
+        }
+    </script>
+</body>
+</html>
